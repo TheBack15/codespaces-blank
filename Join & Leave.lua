@@ -154,12 +154,14 @@ if join then
 				gradient.Rotation = 90
 				local stroke = Instance.new("UIStroke", rarityText)
 				stroke.Thickness = 3
+				stroke.Color = Color3.fromRGB(rand * (255 / 1000),0,0)
 
 				local gradient = Instance.new("UIGradient", ageText)
 				gradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25))}
 				gradient.Rotation = 90
-				local stroke = Instance.new("UIStroke", ageText)
-				stroke.Thickness = 3
+				local stroke1 = Instance.new("UIStroke", ageText)
+				stroke1.Thickness = 3
+				stroke1.Color = Color3.fromRGB(player.AccountAge * (255 / 6789),0,0)
 			end
 			keepBill()
 			player.Character:FindFirstChildOfClass("Humanoid").Died:Connect(function()
