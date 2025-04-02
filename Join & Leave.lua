@@ -172,7 +172,7 @@ if join then
 				highlight.FillTransparency = highlight.FillTransparency - 0.001
 				highlight.OutlineTransparency = highlight.OutlineTransparency - 0.001
 				if highlight.OutlineTransparency <= 0 and highlight.FillTransparency <= 0 then
-					local function shockwave()
+					spawn(function()
 						local shockwave = Instance.new("Part", workspace)
 
 						shockwave.Shape = Enum.PartType.Ball
@@ -199,8 +199,7 @@ if join then
 								shockwave:Destroy()
 							end
 						until shockwave.Transparency >= 1
-					end
-					shockwave()
+					end)
 				end
 			until highlight.FillTransparency >= 1
 		end
