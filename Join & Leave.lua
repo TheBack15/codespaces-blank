@@ -58,7 +58,7 @@ for _, v in ipairs(game:GetService("Players"):GetChildren()) do
 			local rand = 100 / (math.random()*100)
 			rand = string.format("%.3f", rand)
 			rarityText.Text = "1 in " .. rand
-			
+
 			ageText.BackgroundTransparency = 1
 			ageText.AnchorPoint = Vector2.new(0.5,1)
 			ageText.Position = UDim2.fromScale(0.5,1)
@@ -78,18 +78,21 @@ for _, v in ipairs(game:GetService("Players"):GetChildren()) do
 			local accountAge = v.AccountAge
 			local ageString = daysToYMD(accountAge)
 			ageText.Text = ageString
-			
+
 			local gradient = Instance.new("UIGradient", rarityText) 
 			gradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25))}
 			gradient.Rotation = 90
 			local stroke = Instance.new("UIStroke", rarityText)
 			stroke.Thickness = 3
-			
+			stroke.Color = Color3.fromRGB(rand * (255 / 1000),0,0)
+
 			local gradient = Instance.new("UIGradient", ageText)
 			gradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25))}
 			gradient.Rotation = 90
-			local stroke = Instance.new("UIStroke", ageText)
-			stroke.Thickness = 3
+			local stroke1 = Instance.new("UIStroke", ageText)
+			stroke1.Thickness = 3
+			stroke1.Color = Color3.fromRGB(v.AccountAge * (255 / 6789),0,0)
+			
 		end
 	end
 end
@@ -125,7 +128,7 @@ if join then
 				rarityText.TextScaled = true
 				rarityText.Text = "1 in " .. rand
 				rarityText.Name = "Rarity"
-				
+
 				ageText.BackgroundTransparency = 1
 				ageText.AnchorPoint = Vector2.new(0.5,1)
 				ageText.Position = UDim2.fromScale(0.5,1)
@@ -151,7 +154,7 @@ if join then
 				gradient.Rotation = 90
 				local stroke = Instance.new("UIStroke", rarityText)
 				stroke.Thickness = 3
-				
+
 				local gradient = Instance.new("UIGradient", ageText)
 				gradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25))}
 				gradient.Rotation = 90
@@ -236,7 +239,7 @@ if join then
 
 		local strokeIM = Instance.new("UIStroke", image)
 		strokeIM.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-		strokeIM.Color = Color3.fromRGB(player.AccountAge * (255 / 6788),0,0)
+		strokeIM.Color = Color3.fromRGB(player.AccountAge * (255 / 6789),0,0)
 		strokeIM.Thickness = 2
 
 		Instance.new("UIStroke", text2).Thickness = 3
@@ -345,7 +348,7 @@ if leave then
 
 		local strokeIM = Instance.new("UIStroke", image)
 		strokeIM.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-		strokeIM.Color = Color3.fromRGB(player.AccountAge * (255 / 6788),0,0)
+		strokeIM.Color = Color3.fromRGB(player.AccountAge * (255 / 6789),0,0)
 		strokeIM.Thickness = 2
 
 		local gradient = Instance.new("UIGradient", text)
@@ -440,4 +443,3 @@ while true do
 		end
 	end
 end
-
