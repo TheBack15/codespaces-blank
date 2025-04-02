@@ -236,7 +236,7 @@ if join then
 
 		local strokeIM = Instance.new("UIStroke", image)
 		strokeIM.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-		strokeIM.Color = Color3.fromRGB(player.AccountAge * (85 / 2229),0,0)
+		strokeIM.Color = Color3.fromRGB(player.AccountAge * (255 / 6788),0,0)
 		strokeIM.Thickness = 2
 
 		Instance.new("UIStroke", text2).Thickness = 3
@@ -345,7 +345,7 @@ if leave then
 
 		local strokeIM = Instance.new("UIStroke", image)
 		strokeIM.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-		strokeIM.Color = Color3.fromRGB(player.AccountAge * (85 / 2229),0,0)
+		strokeIM.Color = Color3.fromRGB(player.AccountAge * (255 / 6788),0,0)
 		strokeIM.Thickness = 2
 
 		local gradient = Instance.new("UIGradient", text)
