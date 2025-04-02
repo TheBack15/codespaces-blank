@@ -1,4 +1,3 @@
-print("it works!")
 local activeBillboards = {}
 local highest = 0
 local p = game:GetService("Players").LocalPlayer
@@ -207,7 +206,6 @@ if join then
 		end
 		player.CharacterAdded:Connect(function()
 			joinEffect()
-			print("true")
 		end)
 		local bill = Instance.new("BillboardGui", p.Character.Head)
 		local text = Instance.new("TextLabel", bill)
