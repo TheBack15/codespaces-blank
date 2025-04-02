@@ -169,8 +169,8 @@ if join then
 			highlight.FillTransparency = 1
 			repeat
 				task.wait()
-				highlight.FillTransparency = highlight.FillTransparency - 0.001
-				highlight.OutlineTransparency = highlight.OutlineTransparency - 0.001
+				highlight.FillTransparency = highlight.FillTransparency - (5 / player.AccountAge)
+				highlight.OutlineTransparency = highlight.OutlineTransparency - (5 / player.AccountAge)
 				if highlight.OutlineTransparency <= 0 and highlight.FillTransparency <= 0 then
 					spawn(function()
 						local shockwave = Instance.new("Part", workspace)
@@ -189,9 +189,9 @@ if join then
 						repeat
 							task.wait()
 							shockwave.Size = shockwave.Size + Vector3.new(0.1,0.1,0.1)
-							shockwave.Transparency = shockwave.Transparency + 0.001
-							highlight.FillTransparency = highlight.FillTransparency + 0.01
-							highlight.OutlineTransparency = highlight.OutlineTransparency + 0.01
+							shockwave.Transparency = shockwave.Transparency + (5 / player.AccountAge)
+							highlight.FillTransparency = highlight.FillTransparency + (50 / player.AccountAge)
+							highlight.OutlineTransparency = highlight.OutlineTransparency + (50 / player.AccountAge)
 							if highlight.OutlineTransparency >= 1 and highlight.FillTransparency >= 1 then
 								highlight:Destroy()
 							end
