@@ -198,6 +198,7 @@ if join then
 							end
 							if shockwave.Transparency >= 1 then
 								shockwave:Destroy()
+								break
 							end
 						until shockwave.Transparency >= 1
 					end)
@@ -442,3 +443,4 @@ while true do
 		end
 	end
 end
+
