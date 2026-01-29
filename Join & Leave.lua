@@ -9,6 +9,8 @@ local kill = false
 local frame = Instance.new("Frame", screen)
 local button = Instance.new("TextButton", frame)
 local drag = Instance.new("UIDragDetector", frame)
+local shockwaveFolder = Instance.new("Folder")
+shockwaveFolder.Parent = workspace
 frame.Position = UDim2.fromScale(0.83,0.748)
 frame.Size = UDim2.fromScale(0.037,0.07)
 frame.Transparency = 0.75
@@ -174,7 +176,7 @@ if join then
 				highlight.OutlineTransparency = highlight.OutlineTransparency - (5 / player.AccountAge)
 				if highlight.OutlineTransparency <= 0 and highlight.FillTransparency <= 0 and player.Character then
 					spawn(function()
-						local shockwave = Instance.new("Part", workspace)
+						local shockwave = Instance.new("Part", workspace:WaitForChild("shockwaveFolder"))
 
 						shockwave.Shape = Enum.PartType.Ball
 						shockwave.TopSurface = Enum.SurfaceType.Smooth
@@ -443,5 +445,6 @@ while true do
 		end
 	end
 end
+
 
 
