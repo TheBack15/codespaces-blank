@@ -9,9 +9,8 @@ local kill = false
 local frame = Instance.new("Frame", screen)
 local button = Instance.new("TextButton", frame)
 local drag = Instance.new("UIDragDetector", frame)
-local shockwaveFolder = Instance.new("Folder")
-shockwaveFolder.Parent = workspace
-shockwaveFolder.Name = "shockwaveFolder"
+local shockwaveFolder = Instance.new("Folder", workspace)
+shockwaveFolder.name = "shockwave Folder"
 frame.Position = UDim2.fromScale(0.83,0.748)
 frame.Size = UDim2.fromScale(0.037,0.07)
 frame.Transparency = 0.75
@@ -94,7 +93,7 @@ for _, v in ipairs(game:GetService("Players"):GetChildren()) do
 			local stroke1 = Instance.new("UIStroke", ageText)
 			stroke1.Thickness = 3
 			stroke1.Color = Color3.fromRGB(v.AccountAge * (255 / 6789),0,0)
-			
+
 		end
 	end
 end
@@ -446,7 +445,6 @@ while true do
 		end
 	end
 end
-
 
 
 
