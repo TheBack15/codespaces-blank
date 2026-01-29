@@ -92,7 +92,7 @@ for _, v in ipairs(game:GetService("Players"):GetChildren()) do
 			gradient.Rotation = 90
 			local stroke1 = Instance.new("UIStroke", ageText)
 			stroke1.Thickness = 3
-			stroke1.Color = Color3.fromRGB(v.AccountAge * (255 / 6789),0,0)
+			stroke1.Color = Color3.fromRGB(v.AccountAge * (255 / 7090),0,0)
 
 		end
 	end
@@ -162,7 +162,7 @@ if join then
 				gradient.Rotation = 90
 				local stroke1 = Instance.new("UIStroke", ageText)
 				stroke1.Thickness = 3
-				stroke1.Color = Color3.fromRGB(player.AccountAge * (255 / 6789),0,0)
+				stroke1.Color = Color3.fromRGB(player.AccountAge * (255 / 7090),0,0)
 			end
 			keepBill()
 			player.Character:FindFirstChildOfClass("Humanoid").Died:Connect(function()
@@ -445,6 +445,7 @@ while true do
 		end
 	end
 end
+
 
 
 
