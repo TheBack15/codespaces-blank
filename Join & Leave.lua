@@ -10,7 +10,7 @@ local frame = Instance.new("Frame", screen)
 local button = Instance.new("TextButton", frame)
 local drag = Instance.new("UIDragDetector", frame)
 local shockwaveFolder = Instance.new("Folder", workspace)
-shockwaveFolder.name = "shockwave Folder"
+shockwaveFolder.Name = "shockwaveFolder"
 frame.Position = UDim2.fromScale(0.83,0.748)
 frame.Size = UDim2.fromScale(0.037,0.07)
 frame.Transparency = 0.75
@@ -445,6 +445,7 @@ while true do
 		end
 	end
 end
+
 
 
 
