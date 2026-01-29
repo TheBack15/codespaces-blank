@@ -172,7 +172,7 @@ if join then
 				task.wait()
 				highlight.FillTransparency = highlight.FillTransparency - (5 / player.AccountAge)
 				highlight.OutlineTransparency = highlight.OutlineTransparency - (5 / player.AccountAge)
-				if highlight.OutlineTransparency <= 0 and highlight.FillTransparency <= 0 then
+				if highlight.OutlineTransparency <= 0 and highlight.FillTransparency <= 0 and player.Character then
 					spawn(function()
 						local shockwave = Instance.new("Part", workspace)
 
@@ -443,4 +443,5 @@ while true do
 		end
 	end
 end
+
 
